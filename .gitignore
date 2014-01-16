@@ -11,3 +11,14 @@
 *.lai
 *.la
 *.a
+
+# VS 2012 Files
+*.sdf
+*.suo
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.idb
+*.log
+*.tlog
