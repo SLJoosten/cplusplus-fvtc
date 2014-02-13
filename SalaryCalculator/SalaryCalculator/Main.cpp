@@ -18,6 +18,7 @@ using namespace std;
 		//get the hours worked
 		cout << "Enter the hours worked last week: ";
 		cin >> work_hours;
+		valid_hours = (work_hours >= 0.0) && (work_hours <= 168.0);
 		//if invalid input, display error message before repeating
 		if (valid_hours == false)
 		{

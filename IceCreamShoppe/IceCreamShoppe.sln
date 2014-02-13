@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IceCreamShoppe", "IceCreamShoppe\IceCreamShoppe.vcxproj", "{E9082E7A-5339-48E3-A0FF-9509DE35DFD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9082E7A-5339-48E3-A0FF-9509DE35DFD7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E9082E7A-5339-48E3-A0FF-9509DE35DFD7}.Debug|Win32.Build.0 = Debug|Win32
+		{E9082E7A-5339-48E3-A0FF-9509DE35DFD7}.Release|Win32.ActiveCfg = Release|Win32
+		{E9082E7A-5339-48E3-A0FF-9509DE35DFD7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
