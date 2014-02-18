@@ -18,7 +18,12 @@ int main()
 		{
 			cout << i + 1 << ". " << flavors[i] << endl;
 		}
+
 		cin >> flavor;
+		//clear out istream after input
+		cin.clear();
+		fflush(stdin);
+
 		if (flavor - 1 >= flavors_length || flavor - 1 < 0)
 		{
 			cout << "Please enter a valid flavor" << endl;
