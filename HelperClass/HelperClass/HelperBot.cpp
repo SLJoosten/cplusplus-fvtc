@@ -72,7 +72,7 @@ int HelperBot::ConvertToInt(string value)
 			break;
 		}
 		//number = digit * 10 ^ (length - 1)
-		int number = digit * pow(10, value.length() - (i + 1));
+		int number = digit * pow(10.0, value.length() - (i + 1.0));
 		/*int number = digit * 10 ^ (value.length() - (i + 1));*/
 		//add number to total
 		total += number;
