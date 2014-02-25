@@ -76,4 +76,6 @@ int HelperBot::ConvertToInt(string value)
 		/*int number = digit * 10 ^ (value.length() - (i + 1));*/
 		//add number to total
 		total += number;
+	}
+	return total;
 }
