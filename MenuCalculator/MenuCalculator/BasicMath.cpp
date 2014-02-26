@@ -19,3 +19,8 @@ double BasicMath::Divide(double value1, double value2)
 {
 	return value1 / value2;
 }
+
+double BasicMath::Average(double value1, double value2)
+{
+	return (value1 + value2) / 2;
+}
