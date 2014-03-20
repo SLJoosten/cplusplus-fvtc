@@ -16,10 +16,7 @@ int main()
 		{14, 52, 77},
 		{16, 19, 59}
 	};
-	int third_array[][3] = {
-		{first_array[0][0] + second_array[0][0], first_array[0][1] + second_array[0][1], first_array[0][2] + second_array[0][2]},
-		{first_array[1][0] + second_array[1][0], first_array[1][1] + second_array[1][1], first_array[1][2] + second_array[1][2]}
-	};
+	int third_array[2][3];
 
 	//display first array to user
 	cout << "Array 1:" << endl;
@@ -59,6 +56,8 @@ int main()
 	{
 		for (int j = 0; j < 3; j++)
 		{
+			//assign the corresponding sum to the appropriate array element
+			third_array[i][j] = first_array[i][j] + second_array[i][j];
 			//display elements with spaces in between
 			cout << setw(5) << third_array[i][j] << " ";
 		}
