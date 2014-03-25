@@ -31,7 +31,27 @@ int main()
 	}*/
 
 	Collection c;
-	cout << "Collection: " << c.GetValue(0);
+	c.Add(5);
+	c.Add(7);
+	c.Add(11);
+	c.Add(13);
+
+	cout << "Length of Collection: " << c.Length() << endl;
+
+
+	cout << c << endl;
+
+	cout << "Element at 0: " << c[0] << endl;
+
+	int numbers[] = {1, 2, 3};
+
+	numbers[0] = 999;
+	cout << "numbers[0]: " << numbers[0] << endl;
+
+	c[0] = 999;
+	cout << "c[0]: " << c[0] << endl;
+
+	/*cout << "Collection: " << c.GetValue(0);*/
 	_getch();
 	return 0;
 }
