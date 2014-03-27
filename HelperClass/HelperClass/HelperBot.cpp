@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include "HelperBot.h"
 
 double HelperBot::ConvertToDouble(string s)
@@ -230,4 +232,42 @@ int HelperBot::ConvertToInt(string value)
 		total += number;
 	}
 	return total;
+}
+
+bool HelperBot::TryParse(string input, int& value)
+{
+	bool success = HelperBot::IsNumeric(input);
+	if (success)
+	{
+		value = HelperBot::ConvertToInt(input);
+	}
+	return success;
+}
+
+string HelperBot::ToCurrency(double value)
+{
+	string output = "";
+	char temp[100];
+	sprintf(temp, "$%0.2f", value);
+    output = temp;
+	return output;
+}
+
+string HelperBot::PrintArray(int arr[], int length)
+{
+	string output = "";
+	output += "{";
+	char temp[100] = "";
+	for (int i = 0; i < length; i++)
+	{
+		//tostring() - print format to char aray
+		sprintf(temp, "%i", arr[i]);
+		output += temp;
+		if (i < length - 1)
+		{
+			output += ",";
+		}
+	}
+	output += "}";
+	return output;
 }
