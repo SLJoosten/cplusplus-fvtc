@@ -7,6 +7,13 @@
 
 using namespace std;
 
+struct Student
+{
+	string FirstName;
+	string LastName;
+	int Credits;
+};
+
 int main()
 {
 	/*bool quit = false;
@@ -30,7 +37,28 @@ int main()
 		if (c == 'q' || c == 'Q') quit = true;
 	}*/
 
-	Collection c;
+	Student jeff;
+	jeff.FirstName = "Jeff";
+	jeff.LastName = "Richards";
+	jeff.Credits = 27;
+
+	Collection<Student> students;
+	students.Add(jeff);
+
+	for (int i = 0; i < students.Length(); i++)
+	{
+		Student tempStudent = students[i];
+		cout << tempStudent.LastName << "," << tempStudent.FirstName << endl;
+	}
+
+	Collection<string> names;
+	names.Add("Rick");
+	names.Add("Tony");
+	names.Add("Suzy");
+
+	cout << "Names: " << names << endl;
+
+	Collection<int> c;
 	c.Add(5);
 	c.Add(7);
 	c.Add(11);
