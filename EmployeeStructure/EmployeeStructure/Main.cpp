@@ -121,14 +121,6 @@ int main()
 			
 			//add user-created employee to collection
 			employeeList.Add(UserEmployee);
-			//ask if user would like to add another
-			cout << endl << "Press 'k' to keep adding employees or anything else to proceed to report: " << endl;
-			c = _getch();
-			//if not, set boolean to false to exit loop
-			if(c != 'k' && c != 'K')
-			{
-				addEmployee = false;
-			}
 		}
 		else
 		{
