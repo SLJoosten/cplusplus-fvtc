@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1397578564 source:/home/student/cplusplus-fvtc/1stCBApp/1stCBApp/main.cpp
+	<iostream>
+	"HelperBot.h"
+
+1397578170 source:/home/student/cplusplus-fvtc/1stCBApp/1stCBApp/HelperBot.cpp
+	"HelperBot.h"
+	<math.h>
+	<stdio.h>
+
+1397577779 /home/student/cplusplus-fvtc/1stCBApp/1stCBApp/HelperBot.h
+	<string>
+

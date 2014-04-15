@@ -1,6 +1,8 @@
 #define _CRT_SECURE_NO_WARNING
 
 #include "HelperBot.h"
+#include <math.h>
+#include <stdio.h>
 
 double HelperBot::ConvertToDouble(string s)
 {
@@ -271,3 +273,4 @@ string HelperBot::PrintArray(int arr[], int length)
 	output += "}";
 	return output;
 }
+
