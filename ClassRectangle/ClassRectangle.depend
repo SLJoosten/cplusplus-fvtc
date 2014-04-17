@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1397761436 source:/home/student/cplusplus-fvtc/ClassRectangle/Rectangle.cpp
+	"Rectangle.h"
+	<string>
+
+1397761436 /home/student/cplusplus-fvtc/ClassRectangle/Rectangle.h
+	<iostream>
+	<string>
+
+1397686204 source:/home/student/cplusplus-fvtc/ClassRectangle/main.cpp
+	<iostream>
+	"Rectangle.h"
+
+1397578170 source:/home/student/cplusplus-fvtc/1stCBApp/1stCBApp/HelperBot.cpp
+	"HelperBot.h"
+	<math.h>
+	<stdio.h>
+
+1397577779 /home/student/cplusplus-fvtc/1stCBApp/1stCBApp/HelperBot.h
+	<string>
+
