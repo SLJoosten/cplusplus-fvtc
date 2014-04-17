@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1397753543 source:/home/student/cplusplus-fvtc/Superheroes/Superhero.cpp
+	"Superhero.h"
+
+1397753606 /home/student/cplusplus-fvtc/Superheroes/Superhero.h
+	<iostream>
+
+1397752809 source:/home/student/cplusplus-fvtc/Superheroes/main.cpp
+	<iostream>
+	"Superhero.h"
+
