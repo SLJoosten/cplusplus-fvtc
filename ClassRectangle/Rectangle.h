@@ -25,12 +25,12 @@ class Rectangle
         void set_width(int);
 
         //declare mutator
-        //void SetRec(int, int);
+        void SetRec(int, int);
 
         //other method declarations
         int get_area();
         int get_perimeter();
-        //string to_string();
+        string to_string();
 };
 
 #endif // RECTANGLE_H_INCLUDED

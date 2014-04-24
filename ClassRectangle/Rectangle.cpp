@@ -42,11 +42,11 @@ void Rectangle::set_width(int width)
 }
 
 //declare mutator
-//void Rectangle::SetRec(int length, int width)
-//{
-    //_length = length;
-    //_width = width;
-//}
+void Rectangle::SetRec(int length, int width)
+{
+    _length = length;
+    _width = width;
+}
 
 //other methods
 int Rectangle::get_area()
@@ -59,7 +59,18 @@ int Rectangle::get_perimeter()
     return 2 * _length + 2 * _width;
 }
 
-//string Rectangle::to_string()
-//{
+string Rectangle::to_string()
+{
+    string char_rectangle;
 
-//}
+    for (int i = 0; i < _length; i++)
+    {
+        for (int j = 0; j < _width; j++)
+        {
+            char_rectangle += "#";
+        }
+        char_rectangle += "\n";
+    }
+
+    return char_rectangle;
+}
