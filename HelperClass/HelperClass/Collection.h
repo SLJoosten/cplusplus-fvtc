@@ -84,6 +84,27 @@ void Collection<T>::Add(T value)
 }
 
 template <class T>
+void Collection<T>::Sort()
+{
+    bool sorted = false;
+    do
+    {
+        sorted = true;
+        for (int i = 0; i < _length - 1; i++)
+        {
+            if (_data[i] > _data[i + 1])
+            {
+                T temp = _data[i+1];
+                _data[i] = _data[i+1];
+                _data[i+1] = temp;
+                sorted = false;
+            }
+        }
+        prettyPrint(numbers, length);
+    } while (!sorted);
+}
+
+template <class T>
 ostream& operator<<(ostream &out, Collection<T> &c)
 {
 	out << "{";

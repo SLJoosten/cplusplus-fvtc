@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../1stCBApp/1stCBApp/Collection.h" />
+		<Unit filename="Superhero.cpp" />
+		<Unit filename="Superhero.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

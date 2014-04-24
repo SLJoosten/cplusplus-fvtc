@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1398355572 source:/home/student/cplusplus-fvtc/Sort/main.cpp
+	<iostream>
+	<string>
+
