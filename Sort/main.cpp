@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include "../1stCBApp/1stCBApp/Collection.h"
+#include "../Superheroes/Superhero.h"
 
 using namespace std;
 
@@ -10,9 +12,27 @@ void bubbleSort(int*, int);
 
 int main()
 {
-    int numbers[] = {5, 13, 7, 3, 11};
+    //int numbers[] = {5, 13, 7, 3, 11};
 
-    bubbleSort(numbers, 5);
+    //bubbleSort(numbers, 5);
+
+    Collection<int> c;
+    c.Add(5);
+    c.Add(2);
+    c.Add(11);
+    c.Add(66);
+    c.Add(22);
+    c.Add(76);
+    c.Add(84);
+    c.Add(8);
+    c.Add(100);
+    cout << "Unsorted: " << c << endl;
+    c.Sort();
+    cout << "Sorted: " << c << endl;
+    cout << "Contains:5 = " << c.Contains(5) << endl;
+    cout << "Contains:17 = " << c.Contains(17) << endl;
+
+    Superhero captain_america = Superhero("Captain America", "shield and super soldier serum", "Steve Rogers", 35);
 
     return 0;
 }

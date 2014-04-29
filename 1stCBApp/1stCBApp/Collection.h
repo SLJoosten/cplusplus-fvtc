@@ -12,6 +12,8 @@ class Collection
 private:
 	T* _data;
 	int _length;
+	int LinearSearch(T);
+	int _sorted;
 
 public:
 	//constructor
@@ -28,6 +30,13 @@ public:
 	//friend ostream& operator<<(ostream&, Collection&);
 
 	T& operator[](int);
+
+	//sort function
+	void Sort();
+	//index of function
+	int IndexOf(T);
+	//contains function
+	bool Contains(T);
 };
 
 
@@ -84,6 +93,7 @@ void Collection<T>::Add(T value)
 	//point _data to new array
 	_data = temp;
 	_length++;
+	_sorted = false;
 }
 
 template <class T>
@@ -97,6 +107,59 @@ ostream& operator<<(ostream &out, Collection<T> &c)
 	}
 	out << "}";
 	return out;
+}
+
+template <class T>
+void Collection<T>::Sort()
+{
+    bool sorted = false;
+    do
+    {
+        sorted = true;
+        for (int i = 0; i < _length - 1; i++)
+        {
+            if (_data[i] > _data[i + 1])
+            {
+                T temp = _data[i];
+                _data[i] = _data[i + 1];
+                _data[i + 1] = temp;
+                sorted = false;
+            }
+        }
+    } while (!sorted);
+}
+
+template <class T>
+int Collection<T>::LinearSearch(T value)
+{
+    int index = -1;
+    for (int i = 0; i < _length; i++)
+    {
+        if (_data[i] == value)
+        {
+            index = i;
+            break;
+        }
+        else if (_sorted && _data[i] > value)
+        {
+            break;
+        }
+    }
+    return index;
+}
+
+template <class T>
+int Collection<T>::IndexOf(T value)
+{
+    int index = -1;
+    index = LinearSearch(value);
+    return 0;
+}
+
+template <class T>
+bool Collection<T>::Contains(T value)
+{
+    return IndexOf(value) > -1;
 }
 
 template <class T>
