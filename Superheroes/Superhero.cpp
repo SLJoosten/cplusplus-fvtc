@@ -8,12 +8,13 @@ Superhero::Superhero()
     _age = -1;
 }
 
-Superhero::Superhero(string name, string power, string secret, int age)
+Superhero::Superhero(string name, string power, string secret, int age, int powerLevel)
 {
     _name = name;
     _power = power;
     _secret = secret;
     _age = age;
+    _powerLevel = powerLevel;
 }
 
 void Superhero::RevealSecretIdentity()
@@ -26,6 +27,28 @@ ostream& operator<<(ostream& out, Superhero& s)
     out << s._name << endl;
     return out;
 }
+
+bool operator >(Superhero& hero1, Superhero& hero2)
+{
+    return (hero1._powerLevel > hero2._powerLevel);
+}
+
+bool operator <(Superhero& hero1, Superhero& hero2)
+{
+    return (hero1._powerLevel < hero2._powerLevel);
+}
+
+bool operator ==(Superhero& hero1, Superhero& hero2)
+{
+    return (hero1._powerLevel == hero2._powerLevel);
+}
+
+//void operator =(Superhero& hero1, Superhero& hero2)
+//{
+    //hero1._name = hero2._name;
+    //hero1._power = hero2._power;
+    //and so on
+//}
 
 string Superhero::name()
 {
@@ -65,4 +88,9 @@ void Superhero::set_secret(string secret)
 void Superhero::set_age(int age)
 {
     _age = age;
+}
+
+void Superhero::set_power_level(int powerLevel)
+{
+    _powerLevel = powerLevel;
 }

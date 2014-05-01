@@ -32,7 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../1stCBApp/1stCBApp/Collection.h" />
+		<Unit filename="../1stCBApp/1stCBApp/HelperBot.cpp" />
+		<Unit filename="../1stCBApp/1stCBApp/HelperBot.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="../Superheroes/Superhero.cpp" />
+		<Unit filename="../Superheroes/Superhero.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

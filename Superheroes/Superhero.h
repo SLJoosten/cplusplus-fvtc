@@ -12,12 +12,13 @@ class Superhero
     string _name;
     string _power;
     string _secret;
+    int _powerLevel;
     int _age;
 
   public:
     //constructors
     Superhero();
-    Superhero(string, string, string, int);
+    Superhero(string, string, string, int, int);
 
     //destructor
     //~Superhero();
@@ -33,11 +34,16 @@ class Superhero
     void set_power(string);
     void set_secret(string);
     void set_age(int);
+    void set_power_level(int);
 
     //other methods
     void RevealSecretIdentity();
 
     friend ostream& operator<<(ostream&, Superhero&);
+    friend bool operator >(Superhero&, Superhero&);
+    friend bool operator <(Superhero&, Superhero&);
+    friend bool operator ==(Superhero&, Superhero&);
+    //friend void operator =(Superhero&, Superhero&);
 };
 
 #endif // SUPERHERO_H_INCLUDED

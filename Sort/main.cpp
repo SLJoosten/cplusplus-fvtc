@@ -12,6 +12,23 @@ void bubbleSort(int*, int);
 
 int main()
 {
+    Collection<Superhero> superfriends;
+
+    superfriends.Add(Superhero("Hulk", "Smash", "Bruce Banner", 37, 1000));
+    superfriends.Add(Superhero("Iron Man", "Suit", "Tony Stark", 45, 400));
+    superfriends.Add(Superhero("Captain America", "Shield and super soldier serum", "Steve Rogers", 35, 800));
+    superfriends.Add(Superhero("Ant Man", "Insects", "Henry Pym", 40, 100));
+
+    superfriends.Sort();
+
+    cout << superfriends << endl;
+
+    return 0;
+}
+
+//code from 4/28
+void sortTest()
+{
     //int numbers[] = {5, 13, 7, 3, 11};
 
     //bubbleSort(numbers, 5);
@@ -29,12 +46,8 @@ int main()
     cout << "Unsorted: " << c << endl;
     c.Sort();
     cout << "Sorted: " << c << endl;
-    cout << "Contains:5 = " << c.Contains(5) << endl;
-    cout << "Contains:17 = " << c.Contains(17) << endl;
-
-    Superhero captain_america = Superhero("Captain America", "shield and super soldier serum", "Steve Rogers", 35);
-
-    return 0;
+   // cout << "Contains:5 = " << c.Contains(5) << endl;
+   // cout << "Contains:17 = " << c.Contains(17) << endl;
 }
 
 void swap(int a, int b, int* numbers)
