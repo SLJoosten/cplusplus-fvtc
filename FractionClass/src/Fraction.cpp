@@ -47,9 +47,9 @@ Fraction::~Fraction()
 //other methods
 Fraction& Fraction::Simplify(Fraction& frac)
 {
-    for (int i = 100; i > 0; i--)
+    for (int i = 100; i > 1; i--)
     {
-        if (frac.Numerator() % i == 0 && frac.Denominator() % i == 0)
+        if (i <= frac.Numerator() && i <= frac.Denominator() && frac.Numerator() % i == 0 && frac.Denominator() % i == 0)
         {
             frac.SetNumerator(frac.Numerator() / i);
             frac.SetDenominator(frac.Denominator() / i);
@@ -82,8 +82,11 @@ Fraction& Fraction::ToCommonDenominator(Fraction& frac, int comm_denom)
 
 ostream& operator<<(ostream& out, Fraction& frac)
 {
+    Fraction& new_frac = frac.Simplify(frac);
+
     //output fraction as numerator/denominator (i.e. 1/2)
-    out << frac.Numerator() << "/" << frac.Denominator();
+    out << new_frac.Numerator() << "/" << new_frac.Denominator();
+
     return out;
 }
 
