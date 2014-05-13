@@ -6,8 +6,7 @@ using namespace std;
 int main()
 {
     Fraction test_frac1(1,4);
-    Fraction test_frac2(4,5);
-    Fraction test_frac3;
+    Fraction test_frac2(2,3);
 
     cout << "First Fraction: " << test_frac1 << endl;
     cout << "Second Fraction: " << test_frac2 << endl;

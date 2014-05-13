@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1399999832 source:/home/student/cplusplus-fvtc/FractionClass/main.cpp
+1400003009 source:/home/student/cplusplus-fvtc/FractionClass/main.cpp
 	<iostream>
 	"include/Fraction.h"
 
-1399942761 /home/student/cplusplus-fvtc/FractionClass/include/Fraction.h
+1400002154 /home/student/cplusplus-fvtc/FractionClass/include/Fraction.h
 	<iostream>
 
-1399943152 source:/home/student/cplusplus-fvtc/FractionClass/src/Fraction.cpp
+1400002349 source:/home/student/cplusplus-fvtc/FractionClass/src/Fraction.cpp
 	"../include/Fraction.h"
 

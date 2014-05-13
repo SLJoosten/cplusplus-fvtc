@@ -45,10 +45,20 @@ Fraction::~Fraction()
 }
 
 //other methods
-//Fraction& Fraction::Simplify(Fraction& frac)
-//{
+Fraction& Fraction::Simplify(Fraction& frac)
+{
+    for (int i = 100; i > 0; i--)
+    {
+        if (frac.Numerator() % i == 0 && frac.Denominator() % i == 0)
+        {
+            frac.SetNumerator(frac.Numerator() / i);
+            frac.SetDenominator(frac.Denominator() / i);
+        }
+    }
+    Fraction simplified(_numerator, _denominator);
 
-//}
+    return simplified;
+}
 
 int Fraction::GetCommonDenominator(int first_denom, int second_denom)
 {
@@ -65,7 +75,7 @@ Fraction& Fraction::ToCommonDenominator(Fraction& frac, int comm_denom)
     int new_num = frac.Numerator() * others_denominator;
     int new_denom = frac.Denominator() * others_denominator;
 
-    Fraction converted = Fraction(new_num, new_denom);
+    Fraction converted(new_num, new_denom);
 
     return converted;
 }
@@ -82,8 +92,8 @@ Fraction& operator*(Fraction& frac_1, Fraction& frac_2)
     //multiply the numerators and denominators together to get the resulting numerator and denominator
     int product_num = frac_1.Numerator() * frac_2.Numerator();
     int product_denom = frac_1.Denominator() * frac_2.Denominator();
-    Fraction product = Fraction(product_num, product_denom);
-    //Simplify(product);
+    Fraction product(product_num, product_denom);
+    product.Simplify(product);
 
     return product;
 }
@@ -93,8 +103,8 @@ Fraction& operator/(Fraction& frac_1, Fraction& frac_2)
     //multiply first fraction by second fraction's reciprocal to get the resulting numerator and denominator
     int quotient_num = frac_1.Numerator() * frac_2.Denominator();
     int quotient_denom = frac_1.Denominator() * frac_2.Numerator();
-    Fraction quotient = Fraction(quotient_num, quotient_denom);
-    //Simplify(quotient);
+    Fraction quotient(quotient_num, quotient_denom);
+    quotient.Simplify(quotient);
 
     return quotient;
 }
@@ -105,10 +115,9 @@ Fraction& operator+(Fraction& frac_1, Fraction& frac_2)
     if (frac_1.Denominator() == frac_2.Denominator())
     {
         //add the numerators together to get the resulting numerator
-        int sum_num = frac_1.Numerator() + frac_2.Numerator();
-        Fraction sum = Fraction(sum_num, frac_1.Denominator());
+        Fraction sum((frac_1.Numerator() + frac_2.Numerator()), frac_2.Denominator());
 
-        //Simplify(sum);
+        sum.Simplify(sum);
 
         return sum;
     }
@@ -120,9 +129,9 @@ Fraction& operator+(Fraction& frac_1, Fraction& frac_2)
         //convert both fractions to that common denominator and add together
         Fraction new_frac_1 = frac_1.ToCommonDenominator(frac_1, comm_denom);
         Fraction new_frac_2 = frac_2.ToCommonDenominator(frac_2, comm_denom);
-        Fraction sum = Fraction((new_frac_1.Numerator() + new_frac_2.Numerator()), comm_denom);
+        Fraction sum((new_frac_1.Numerator() + new_frac_2.Numerator()), comm_denom);
 
-        //Simplify(sum);
+        sum.Simplify(sum);
 
         return sum;
     }
@@ -134,10 +143,9 @@ Fraction& operator-(Fraction& frac_1, Fraction& frac_2)
     if (frac_1.Denominator() == frac_2.Denominator())
     {
         //subtract the numerators to get the resulting numerator
-        int difference_num = frac_1.Numerator() - frac_2.Numerator();
-        Fraction difference = Fraction(difference_num, frac_1.Denominator());
+        Fraction difference((frac_1.Numerator() - frac_2.Numerator()), frac_2.Denominator());
 
-        //Simplify(difference);
+        difference.Simplify(difference);
 
         return difference;
     }
@@ -149,9 +157,9 @@ Fraction& operator-(Fraction& frac_1, Fraction& frac_2)
         //convert both fractions to that common denominator and subtract
         Fraction new_frac_1 = frac_1.ToCommonDenominator(frac_1, comm_denom);
         Fraction new_frac_2 = frac_2.ToCommonDenominator(frac_2, comm_denom);
-        Fraction difference = Fraction((new_frac_1.Numerator() - new_frac_2.Numerator()), comm_denom);
+        Fraction difference((new_frac_1.Numerator() - new_frac_2.Numerator()), comm_denom);
 
-        //Simplify(difference);
+        difference.Simplify(difference);
 
         return difference;
     }
