@@ -10,7 +10,7 @@ class Fraction
     public:
         Fraction();
         Fraction(int, int);
-        virtual ~Fraction();
+        ~Fraction();
 
         int Numerator();
         int Denominator();
